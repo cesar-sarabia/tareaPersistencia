@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cvMascota"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true"
+
+        android:background="@color/colorRed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/imvPet"
+                android:src="@drawable/pet_dra"
+                android:background="@color/cardview_dark_background"
+                />
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:rowCount="1"
+                android:columnCount="9"
+                >
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvVote"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:background="@mipmap/iconsdogbone"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/cardview_default_elevation"
+                    android:foregroundGravity="center"
+                    android:padding="15dp"
+
+                    />
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tvNamePet"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_columnSpan="3"
+                    android:background="@color/colorWhite"
+                    android:textColor="@color/colorBlack"
+                    android:paddingLeft="10dp"
+                    android:text="PRUEBA"
+                    android:gravity="center"
+                    android:layout_gravity="fill_horizontal"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:id="@+id/tvTotalFavs"
+                    android:layout_row="0"
+                    android:layout_column="7"
+                    android:background="@color/colorWhite"
+                    android:textColor="@color/colorBlack"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="18"
+
+                    android:layout_marginRight="9dp"
+                    />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvfavs"
+                    android:layout_row="0"
+                    android:layout_column="8"
+                    android:background="@mipmap/iconsdogbone"
+                    android:outlineAmbientShadowColor="@color/cardview_dark_background"
+                    android:layout_gravity="center_vertical"
+                    android:foregroundGravity="center"
+                    android:padding="15dp"
+                    />
+            </GridLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
